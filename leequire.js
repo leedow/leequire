@@ -18,12 +18,14 @@ var require,define;
 
 	require = function(modules, init){
 		each(modules, function(module){
-			createScript(module);
+			createScript(BASE_URL + '/' +　module + '.js');
 		});
 	}
 
 	define = function(deps, factory){
-		//factory();
+		each(deps, function(deps){
+			createScript(BASE_URL + '/' + deps + '.js');
+		})
 	}
 
 	/*
@@ -33,7 +35,7 @@ var require,define;
 		eachScript(function(ele){
 			MAIN = ele.getAttribute('data-main')?ele.getAttribute('data-main'):MAIN;
 		});
-		createScript(BASE_URL + '/' +　MAIN);
+		createScript(BASE_URL + '/' +　MAIN + '.js');
 	}
 
 	/*

@@ -1,13 +1,12 @@
 /**
- * main
+ * test module
  * @authors leedow (644743991@qq.com)
  * @website http://www.leedow.com
- * @date    2015-04-14 22:32:05
+ * @date    2015-04-15 16:03:47
  * @version $Id$
  */
-require([
-	'leequire/testFiles/test',
+define([
 	'leequire/testFiles/test2'
 ], function(){
 
-});
+})
